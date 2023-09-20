@@ -6,6 +6,7 @@ from .models import Horario, Opcion
 class HorarioView(viewsets.ModelViewSet):
     serializer_class = HorarioSerializer
     queryset = Horario.objects.all()
+    
     def get_queryset(self):
         queryset = self.queryset
         sigla = self.request.query_params.get('sigla')

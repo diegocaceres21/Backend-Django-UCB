@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7k&m57f^6)=)xkie5-zxw!kc+mb(sny=3g6wv$d0+$*3v56g8w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -78,10 +78,31 @@ WSGI_APPLICATION = 'horarios_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}"""
+"""DATABASES = {
+        'default': {
+            'ENGINE': 'djongo',
+            'NAME': 'horarios_ucb',
+            'ENFORCE_SCHEMA': False,
+            'CLIENT': {
+                'host': 'mongodb+srv://ucb-admin:gtkIX63GyioF4c5u@cluster0.7efyghb.mongodb.net/retryWrites=true&w=majority'
+            }  
+        }
+}
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'nbhlzhvn',
+        'USER': 'nbhlzhvn',
+        'PASSWORD': 'A7_apyetzYmDuUCYYGvdqutcgrDbhp34',
+        'HOST': 'motty.db.elephantsql.com',  # Use 'localhost' for a local PostgreSQL server
+        'PORT': '',           # Leave empty for default PostgreSQL port (5432)
     }
 }
 

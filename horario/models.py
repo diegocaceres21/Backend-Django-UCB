@@ -16,6 +16,7 @@ class Opcion(models.Model):
     carrera = models.CharField(max_length=200,blank=False)
     opcion = models.PositiveSmallIntegerField(blank=False)
     horario = models.ManyToManyField(Horario)
+    comentario = models.TextField(blank=True)
 
     def __str__(self):
         return self.carrera + " Opcion: " + str(self.opcion)
